@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="PosInventoryBtn" owl="1">
+        <div class="ticket-button" t-att-class="{ highlight: props.isTicketScreenShown }" t-on-click="onClick">
+            <div class="with-badge" t-att-badge="count">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            </div>
+            <div>Stock</div>
+        </div>
+    </t>
+    <!-- inherit the 'Chrome' template and add our component to it. -->
+    <t t-inherit="point_of_sale.Chrome" t-inherit-mode="extension">
+        <xpath expr="//TicketButton" position="before">
+            <PosInventoryBtn  />
+        </xpath>
+    </t>
+</templates>
