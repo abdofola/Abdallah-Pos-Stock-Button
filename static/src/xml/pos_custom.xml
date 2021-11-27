@@ -3,7 +3,7 @@
     <t t-name="PosInventoryBtn" owl="1">
         <span class="stockBtnTag" t-on-click="onClick">Stock</span>
     </t>
-    <!-- inherit the 'ProductItem component to place or component inside it' -->
+    <!-- inherit the 'ProductItem component to place our component inside it' -->
     <t t-inherit="point_of_sale.ProductItem" t-inherit-mode="extension">
         <xpath expr="//span[hasclass('price-tag')]" position="after">
             <PosInventoryBtn />
